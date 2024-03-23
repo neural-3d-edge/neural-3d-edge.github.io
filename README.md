@@ -1,1 +1,1 @@
-# neural-3d-edge.github.io
+# neural-edge-map.github.io
