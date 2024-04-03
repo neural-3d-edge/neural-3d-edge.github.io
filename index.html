@@ -83,27 +83,28 @@
             <span class="author-block">
               <a href="https://pengsongyou.github.io/">Songyou Peng</a><sup>1,2</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
             <span class="author-block">
-              <a href="https://niujinshuchong.github.io/">Zehao Yu</a><sup>2,3</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://niujinshuchong.github.io/">Zehao Yu</a><sup>3,4</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
             <span class="author-block">
               <a href="http://b1ueber2y.me/">Shaohui Liu</a><sup>1</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
             <span class="author-block">
-              <a href="https://rpautrat.github.io/">Rémi Pautrat</a><sup>1</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://rpautrat.github.io/">Rémi Pautrat</a><sup>1,6</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
             <br>
             <span class="author-block">
-              <a href="https://tsattler.github.io/">Xiaochuan Yin</a><sup>4</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="">Xiaochuan Yin</a><sup>5</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
             <span class="author-block">
-              <a href="https://people.inf.ethz.ch/pomarc/">Marc Pollefeys</a><sup>1,5</sup>
+              <a href="https://people.inf.ethz.ch/pomarc/">Marc Pollefeys</a><sup>1,6</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>ETH Zurich</span>&nbsp;&nbsp;&nbsp;&nbsp;
             <span class="author-block"><sup>2</sup>MPI for Intelligent Systems, Tübingen</span>&nbsp;&nbsp;&nbsp;&nbsp;
-            <br>
             <span class="author-block"><sup>3</sup>University of Tübingen</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <br>
+            <span class="author-block"><sup>4</sup>Tübingen AI Center</span>&nbsp;&nbsp;&nbsp;&nbsp;
             <!-- <span class="author-block"><sup>3</sup>ShanghaiTech University</span>&nbsp;&nbsp;&nbsp;&nbsp; -->
-            <span class="author-block"><sup>4</sup>Utopilot, SAIC Motor</span>&nbsp;&nbsp;&nbsp;&nbsp;
-            <span class="author-block"><sup>5</sup>Microsoft</span>
+            <span class="author-block"><sup>5</sup>Utopilot, SAIC Motor</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="author-block"><sup>6</sup>Microsoft</span>
             
           </div>
 
@@ -181,7 +182,7 @@
         <h2 class="title is-3" style="margin-top: -30px">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Real-world objects and environments are predominantly composed of edge features, including straight lines and curves. Such edges are crucial elements for various applications, such as CAD modeling, surface meshing, lane mapping, \etc. However, existing traditional methods only prioritize lines over curves for simplicity in geometric modeling. To this end, we introduce EMAP, a new method for learning 3D edge representations with a focus on both lines and curves. Our method implicitly encodes 3D edge distance and direction in Unsigned Distance Functions (UDF) from multi-view edge maps. On top of this neural representation, we propose an edge extraction algorithm that robustly abstracts parametric 3D edges from the inferred edge points and their directions. Comprehensive evaluations demonstrate that our method achieves better 3D edge reconstruction on multiple challenging datasets. We further show that our learned UDF field enhances neural surface reconstruction by capturing more details.
+            Real-world objects and environments are predominantly composed of edge features, including straight lines and curves. Such edges are crucial elements for various applications, such as CAD modeling, surface meshing, lane mapping, etc. However, existing traditional methods only prioritize lines over curves for simplicity in geometric modeling. To this end, we introduce EMAP, a new method for learning 3D edge representations with a focus on both lines and curves. Our method implicitly encodes 3D edge distance and direction in Unsigned Distance Functions (UDF) from multi-view edge maps. On top of this neural representation, we propose an edge extraction algorithm that robustly abstracts parametric 3D edges from the inferred edge points and their directions. Comprehensive evaluations demonstrate that our method achieves better 3D edge reconstruction on multiple challenging datasets. We further show that our learned UDF field enhances neural surface reconstruction by capturing more details.
           </p>
         </div>
       </div>
@@ -215,7 +216,7 @@
         <img src="./resources/overview.jpg" class="center">
         <div class="content has-text-justified">
           <p style="margin-top: 30px">
-            <b>Our 3D neural edge reconstruction pipeline </b> that learns accurate 3D edge point locations and directions implicitly from multi-view edge maps through <b>UDF learning</b> and <b>abstracts 3D parametric edges</b> from the learned UDF field. 
+            <b>Our 3D neural edge reconstruction </b> learns accurate 3D edge point locations and directions implicitly from multi-view edge maps through (1) UDF learning and (2) abstracts 3D parametric edges from the learned UDF field. 
           </p>
         </div>
 
@@ -231,14 +232,15 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{Yu2023MipSplatting,
-  author    = {Yu, Zehao and Chen, Anpei and Huang, Binbin and Sattler, Torsten and Geiger, Andreas},
-  title     = {Mip-Splatting: Alias-free 3D Gaussian Splatting},
-  journal   = {arXiv:2311.16493},
-  year      = {2023},
+    <pre><code>@inproceedings{li2024neural,
+  title={3D Neural Edge Reconstruction},
+  author={Li, Lei and Peng, Songyou and Yu, Zehao and Liu, Shaohui and Pautrat, Rémi and Yin, Xiaochuan and Pollefeys, Marc},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2024},
 }</code></pre>
   </div>
 </section>
+
 
 <!-- <section class="section" id="Acknowledgements">
   <div class="container is-max-desktop content">
