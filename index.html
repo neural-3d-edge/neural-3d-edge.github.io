@@ -177,18 +177,6 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3" style="margin-top: -30px">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Real-world objects and environments are predominantly composed of edge features, including straight lines and curves. Such edges are crucial elements for various applications, such as CAD modeling, surface meshing, lane mapping, etc. However, existing traditional methods only prioritize lines over curves for simplicity in geometric modeling. To this end, we introduce EMAP, a new method for learning 3D edge representations with a focus on both lines and curves. Our method implicitly encodes 3D edge distance and direction in Unsigned Distance Functions (UDF) from multi-view edge maps. On top of this neural representation, we propose an edge extraction algorithm that robustly abstracts parametric 3D edges from the inferred edge points and their directions. Comprehensive evaluations demonstrate that our method achieves better 3D edge reconstruction on multiple challenging datasets. We further show that our learned UDF field enhances neural surface reconstruction by capturing more details.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -204,21 +192,50 @@
   
 </section>
 
-
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" style="margin-top: -30px">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Real-world objects and environments are predominantly composed of edge features, including straight lines and curves. Such edges are crucial elements for various applications, such as CAD modeling, surface meshing, lane mapping, etc. However, existing traditional methods only prioritize lines over curves for simplicity in geometric modeling. To this end, we introduce EMAP, a new method for learning 3D edge representations with a focus on both lines and curves. Our method implicitly encodes 3D edge distance and direction in Unsigned Distance Functions (UDF) from multi-view edge maps. On top of this neural representation, we propose an edge extraction algorithm that robustly abstracts parametric 3D edges from the inferred edge points and their directions. Comprehensive evaluations demonstrate that our method achieves better 3D edge reconstruction on multiple challenging datasets. We further show that our learned UDF field enhances neural surface reconstruction by capturing more details.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+  
+</section>
 
 <section class="section">
   <div class="container is-max-desktop">
 
-    <!-- Method. -->
+    <!-- Overview. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
         <h2 class="title is-3" style="margin-top: -20px">Overview</h2>
 
-        <img src="./resources/overview.jpg" class="center">
+        <!-- Resize the image to 3/4 of its original size -->
+        <img src="./resources/overview.jpg" style="width: 80%; height: auto;">
         <div class="content has-text-justified">
           <p style="margin-top: 30px">
-            <b>Our 3D neural edge reconstruction </b> learns accurate 3D edge point locations and directions implicitly from multi-view edge maps through (1) UDF learning and (2) abstracts 3D parametric edges from the learned UDF field. 
+            <b>Our 3D neural edge reconstruction</b> learns accurate 3D edge point locations and directions implicitly from multi-view edge maps through (1) UDF learning and (2) abstracts 3D parametric edges from the learned UDF field. 
           </p>
+        </div>
+
+        <div class="has-text-centered"> <!-- Centered div -->
+          <!-- Resize the GIF to 3/4 of its original size -->
+          <img src="./resources/teaser.gif" style="width: 75%; height: auto;">
+          <div class="content has-text-justified">
+            <div class="has-text-centered"> <!-- Centered text -->
+              <p style="margin-top: 30px">
+                Reconstructed 3D parametric edges on the Replica dataset. 
+              </p>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -227,6 +244,9 @@
 
   </div>
 </section>
+
+
+
 
 
 
