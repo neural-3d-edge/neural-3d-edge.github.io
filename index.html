@@ -136,7 +136,7 @@
           
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/rayeeli/EMAP"
+                <a href="https://github.com/cvg/EMAP"
                    class="external-link button is-normal is-rounded is-dark disabled">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -179,6 +179,23 @@
 
 <section class="section">
   <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" style="margin-top: -30px">Abstract</h2>
+        <div class="content has-text-justified">
+          <p style="margin-top: 30px">
+            Real-world objects and environments are predominantly composed of edge features, including straight lines and curves. Such edges are crucial elements for various applications, such as CAD modeling, surface meshing, lane mapping, etc. However, existing traditional methods only prioritize lines over curves for simplicity in geometric modeling. To this end, we introduce EMAP, a new method for learning 3D edge representations with a focus on both lines and curves. Our method implicitly encodes 3D edge distance and direction in Unsigned Distance Functions (UDF) from multi-view edge maps. On top of this neural representation, we propose an edge extraction algorithm that robustly abstracts parametric 3D edges from the inferred edge points and their directions. Comprehensive evaluations demonstrate that our method achieves better 3D edge reconstruction on multiple challenging datasets. We further show that our learned UDF field enhances neural surface reconstruction by capturing more details.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -196,24 +213,6 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3" style="margin-top: -30px">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Real-world objects and environments are predominantly composed of edge features, including straight lines and curves. Such edges are crucial elements for various applications, such as CAD modeling, surface meshing, lane mapping, etc. However, existing traditional methods only prioritize lines over curves for simplicity in geometric modeling. To this end, we introduce EMAP, a new method for learning 3D edge representations with a focus on both lines and curves. Our method implicitly encodes 3D edge distance and direction in Unsigned Distance Functions (UDF) from multi-view edge maps. On top of this neural representation, we propose an edge extraction algorithm that robustly abstracts parametric 3D edges from the inferred edge points and their directions. Comprehensive evaluations demonstrate that our method achieves better 3D edge reconstruction on multiple challenging datasets. We further show that our learned UDF field enhances neural surface reconstruction by capturing more details.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-  </div>
-  
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
 
     <!-- Overview. -->
     <div class="columns is-centered has-text-centered">
@@ -223,23 +222,10 @@
         <!-- Resize the image to 3/4 of its original size -->
         <img src="./resources/overview.jpg" style="width: 80%; height: auto;">
         <div class="content has-text-justified">
-          <p style="margin-top: 30px">
+          <p style="margin-top: 20px">
             <b>Our 3D neural edge reconstruction</b> learns accurate 3D edge point locations and directions implicitly from multi-view edge maps through (1) UDF learning and (2) abstracts 3D parametric edges from the learned UDF field. 
           </p>
         </div>
-
-        <div class="has-text-centered"> <!-- Centered div -->
-          <!-- Resize the GIF to 3/4 of its original size -->
-          <img src="./resources/teaser.gif" style="width: 75%; height: auto;">
-          <div class="content has-text-justified">
-            <div class="has-text-centered"> <!-- Centered text -->
-              <p style="margin-top: 30px">
-                Reconstructed 3D parametric edges on the Replica dataset. 
-              </p>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
     <!--/ Animation. -->
@@ -248,8 +234,515 @@
 </section>
 
 
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Results. -->
+    <div class="columns is-centered ">
+      <div class="column is-full">
+        <h2 class="title is-3 has-text-centered" style="margin-top: -30px;">Results</h2>
+
+        <h3 class="title is-4">Comparison on Replica_Edge Dataset</h3>
+        <div class="content has-text-justified">
+          <p>
+            LIMAP and NEAT only reconstruct distinctive line segments, 
+            our method generates a more complete 3D edge map combining both line and curve features. 
+          </p>
+        </div>
+
+        <!-- make the column head centered -->
+        <div class="columns">
+          <div class="column has-text-centered">
+            <h3 class="title is-5">RGB</h3>
+          </div>
+          <div class="column has-text-centered">
+            <h3 class="title is-5">LIMAP</h3>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_Replica/GT/room0.gif" alt="Comparison with SoTA methods 1"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_Replica/LIMAP/room0.gif" alt="Comparison with SoTA methods 2"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column has-text-centered">
+            <h3 class="title is-5">NEAT</h3>
+          </div>
+          <div class="column has-text-centered">
+            <h3 class="title is-5">Ours</h3>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_Replica/NEAT/room0.gif" alt="Comparison with SoTA methods 1"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_Replica/EMAP/room0.gif" alt="Comparison with SoTA methods 2"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+        </div>
+
+        <!-- <div class="columns">
+          <div class="column has-text-centered">
+            <h3 class="title is-5">RGB</h3>
+          </div>
+          <div class="column has-text-centered">
+            <h3 class="title is-5">LIMAP</h3>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_Replica/GT/room1.gif" alt="Comparison with SoTA methods 1"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_Replica/LIMAP/room1.gif" alt="Comparison with SoTA methods 2"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column has-text-centered">
+            <h3 class="title is-5">NEAT</h3>
+          </div>
+          <div class="column has-text-centered">
+            <h3 class="title is-5">Ours</h3>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_Replica/NEAT/room1.gif" alt="Comparison with SoTA methods 1"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_Replica/EMAP/room1.gif" alt="Comparison with SoTA methods 2"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+        </div> -->
+
+        <h3 class="title is-4">Comparison on NEF-ABC_Edge Dataset</h3>
+        <!-- <div class="content has-text-justified">
+          <p>
+            NEAT fails on the ABC-NEF dataset because of its heavy dependence on texture input. 
+            LIMAP shows remarkable precision. Nonetheless, LIMAP's inability to reconstruct curves leads to lower performance in completeness and recall.
+            NEF produces complete reconstruction but with low precision. 
+            Our method consistently outperforms all baselines.
+          </p>
+        </div> -->
+
+        <!-- make the column head centered -->
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h3 class="title is-5">CAD Models</h3>
+          </div>
+          <div class="column has-text-centered">
+            <h3 class="title is-5">LIMAP</h3>
+          </div>
+          <div class="column has-text-centered">
+            <h3 class="title is-5">NEF</h3>
+          </div>
+          <div class="column has-text-centered">
+            <h3 class="title is-5">Ours</h3>
+          </div>
+          <div class="column has-text-centered">
+            <h3 class="title is-5">GT</h3>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_ABC/00000568/GT_Image.gif" alt="Comparison with SoTA methods 1"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_ABC/00000568/LIMAP.gif" alt="Comparison with SoTA methods 2"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_ABC/00000568/NEF.gif" alt="Comparison with SoTA methods 3"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_ABC/00000568/EMAP.gif" alt="Comparison with SoTA methods 3"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_ABC/00000568/GT.gif" alt="Comparison with SoTA methods 3"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_ABC/00007025/GT_Image.gif" alt="Comparison with SoTA methods 1"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_ABC/00007025/LIMAP.gif" alt="Comparison with SoTA methods 2"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_ABC/00007025/NEF.gif" alt="Comparison with SoTA methods 3"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_ABC/00007025/EMAP.gif" alt="Comparison with SoTA methods 3"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_ABC/00007025/GT.gif" alt="Comparison with SoTA methods 3"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_ABC/00002906/GT_Image.gif" alt="Comparison with SoTA methods 1"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_ABC/00002906/LIMAP.gif" alt="Comparison with SoTA methods 2"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_ABC/00002906/NEF.gif" alt="Comparison with SoTA methods 3"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_ABC/00002906/EMAP.gif" alt="Comparison with SoTA methods 3"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_ABC/00002906/GT.gif" alt="Comparison with SoTA methods 3"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_ABC/00005139/GT_Image.gif" alt="Comparison with SoTA methods 1"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_ABC/00005139/LIMAP.gif" alt="Comparison with SoTA methods 2"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_ABC/00005139/NEF.gif" alt="Comparison with SoTA methods 3"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_ABC/00005139/EMAP.gif" alt="Comparison with SoTA methods 3"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_ABC/00005139/GT.gif" alt="Comparison with SoTA methods 3"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+        </div>
 
 
+        <h3 class="title is-4">Comparison on DTU_Edge Dataset</h3>
+        <!-- <div class="content has-text-justified">
+          <p>
+            NEAT fails on the ABC-NEF dataset because of its heavy dependence on texture input. 
+            LIMAP shows remarkable precision. Nonetheless, LIMAP's inability to reconstruct curves leads to lower performance in completeness and recall.
+            NEF produces complete reconstruction but with low precision. 
+            Our method consistently outperforms all baselines.
+          </p>
+        </div> -->
+
+        <!-- make the column head centered -->
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h3 class="title is-5">LIMAP</h3>
+          </div>
+          <div class="column has-text-centered">
+            <h3 class="title is-5">NEF</h3>
+          </div>
+          <div class="column has-text-centered">
+            <h3 class="title is-5">NEAT</h3>
+          </div>
+          <div class="column has-text-centered">
+            <h3 class="title is-5">Ours</h3>
+          </div>
+          <div class="column has-text-centered">
+            <h3 class="title is-5">Pseudio GT</h3>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_DTU/LIMAP/scan37.gif"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_DTU/NEF/scan37.gif"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_DTU/NEAT/scan37.gif"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_DTU/EMAP/scan37.gif"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_DTU/GT/scan37.gif"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+        </div>
+
+        <div class="columns">
+        <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_DTU/LIMAP/scan83.gif"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_DTU/NEF/scan83.gif"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_DTU/NEAT/scan83.gif"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_DTU/EMAP/scan83.gif"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./resources/comparison/Gif_DTU/GT/scan83.gif"
+                   class="method-figure" style="animation-duration: 2s;" loop>
+            </figure>
+          </div>
+        </div>
+
+
+        <div class="columns">
+          <div class="column">
+              <figure>
+                <img src="./resources/comparison/Gif_DTU/LIMAP/scan105.gif"
+                    class="method-figure" style="animation-duration: 2s;" loop>
+              </figure>
+            </div>
+            <div class="column">
+              <figure>
+                <img src="./resources/comparison/Gif_DTU/NEF/scan105.gif"
+                    class="method-figure" style="animation-duration: 2s;" loop>
+              </figure>
+            </div>
+            <div class="column">
+              <figure>
+                <img src="./resources/comparison/Gif_DTU/NEAT/scan105.gif"
+                    class="method-figure" style="animation-duration: 2s;" loop>
+              </figure>
+            </div>
+            <div class="column">
+              <figure>
+                <img src="./resources/comparison/Gif_DTU/EMAP/scan105.gif"
+                    class="method-figure" style="animation-duration: 2s;" loop>
+              </figure>
+            </div>
+            <div class="column">
+              <figure>
+                <img src="./resources/comparison/Gif_DTU/GT/scan105.gif"
+                    class="method-figure" style="animation-duration: 2s;" loop>
+              </figure>
+            </div>
+          </div>
+
+        <div class="columns">
+          <div class="column">
+              <figure>
+                <img src="./resources/comparison/Gif_DTU/LIMAP/scan110.gif"
+                    class="method-figure" style="animation-duration: 2s;" loop>
+              </figure>
+            </div>
+            <div class="column">
+              <figure>
+                <img src="./resources/comparison/Gif_DTU/NEF/scan110.gif"
+                    class="method-figure" style="animation-duration: 2s;" loop>
+              </figure>
+            </div>
+            <div class="column">
+              <figure>
+                <img src="./resources/comparison/Gif_DTU/NEAT/scan110.gif"
+                    class="method-figure" style="animation-duration: 2s;" loop>
+              </figure>
+            </div>
+            <div class="column">
+              <figure>
+                <img src="./resources/comparison/Gif_DTU/EMAP/scan110.gif"
+                    class="method-figure" style="animation-duration: 2s;" loop>
+              </figure>
+            </div>
+            <div class="column">
+              <figure>
+                <img src="./resources/comparison/Gif_DTU/GT/scan110.gif"
+                    class="method-figure" style="animation-duration: 2s;" loop>
+              </figure>
+            </div>
+          </div>
+
+        <div class="columns">
+          <div class="column">
+              <figure>
+                <img src="./resources/comparison/Gif_DTU/LIMAP/scan118.gif"
+                    class="method-figure" style="animation-duration: 2s;" loop>
+              </figure>
+            </div>
+            <div class="column">
+              <figure>
+                <img src="./resources/comparison/Gif_DTU/NEF/scan118.gif"
+                    class="method-figure" style="animation-duration: 2s;" loop>
+              </figure>
+            </div>
+            <div class="column">
+              <figure>
+                <img src="./resources/comparison/Gif_DTU/NEAT/scan118.gif"
+                    class="method-figure" style="animation-duration: 2s;" loop>
+              </figure>
+            </div>
+            <div class="column">
+              <figure>
+                <img src="./resources/comparison/Gif_DTU/EMAP/scan118.gif"
+                    class="method-figure" style="animation-duration: 2s;" loop>
+              </figure>
+            </div>
+            <div class="column">
+              <figure>
+                <img src="./resources/comparison/Gif_DTU/GT/scan118.gif"
+                    class="method-figure" style="animation-duration: 2s;" loop>
+              </figure>
+            </div>
+          </div>
+        
+          
+        <div class="columns">
+          <div class="column">
+              <figure>
+                <img src="./resources/comparison/Gif_DTU/LIMAP/scan122.gif"
+                    class="method-figure" style="animation-duration: 2s;" loop>
+              </figure>
+            </div>
+            <div class="column">
+              <figure>
+                <img src="./resources/comparison/Gif_DTU/NEF/scan122.gif"
+                    class="method-figure" style="animation-duration: 2s;" loop>
+              </figure>
+            </div>
+            <div class="column">
+              <figure>
+                <img src="./resources/comparison/Gif_DTU/NEAT/scan122.gif"
+                    class="method-figure" style="animation-duration: 2s;" loop>
+              </figure>
+            </div>
+            <div class="column">
+              <figure>
+                <img src="./resources/comparison/Gif_DTU/EMAP/scan122.gif"
+                    class="method-figure" style="animation-duration: 2s;" loop>
+              </figure>
+            </div>
+            <div class="column">
+              <figure>
+                <img src="./resources/comparison/Gif_DTU/GT/scan122.gif"
+                    class="method-figure" style="animation-duration: 2s;" loop>
+              </figure>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <section class="section" id="BibTeX">
