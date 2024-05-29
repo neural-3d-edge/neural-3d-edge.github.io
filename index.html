@@ -81,7 +81,7 @@
               <span class="author-block">
                 <a href="https://github.com/rayeeli">Lei Li</a><sup>1</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
               <span class="author-block">
-                <a href="https://pengsongyou.github.io/">Songyou Peng</a><sup>1,2*</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://pengsongyou.github.io/">Songyou Peng</a><sup>1,2</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
               <span class="author-block">
                 <a href="https://niujinshuchong.github.io/">Zehao Yu</a><sup>3,4</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
               <span class="author-block">
@@ -95,10 +95,10 @@
                 <a href="https://people.inf.ethz.ch/pomarc/">Marc Pollefeys</a><sup>1,6</sup>
               </span>
             </div>
-
+<!-- 
             <div class="column is-full_width">
               <h2 class="is-size-6">* Corresponding Author</h2>
-            </div>
+            </div> -->
 
             <div class="is-size-5 publication-authors">
               <span class="author-block"><sup>1</sup>ETH Zurich</span>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -159,18 +159,22 @@
 
   <section class="hero teaser"
     style="transform: scale(0.8); transform-origin: top center; margin: 0 auto; display: flex; justify-content: center;">
+    <h2 class="subtitle has-text-centered">
+      <blockquote cite="https://www.huxley.net/bnw/four.html">
+        <p><em>The straight line belongs to men, the curved one to God.</em></p>
+        <footer>—Antoni Gaudí</footer>
+      </blockquote>
+    </h2>
     <div class="container is-max-desktop" style="width: 100%;">
       <div class="hero-body">
         <div class="columns is-centered has-text-centered">
           <div class="column is-full-width">
-
             <video class="video" id="xyalias6" loop playsinline autoplay muted src="resources/replica.mp4"
               style="width: 80%; height: auto;" onplay="resizeAndPlay(this)"></video>
             <canvas height="0" class="videoMerge" id="xyalias6Merge"></canvas>
 
             <h2 class="subtitle has-text-centered" style="margin-top: 15px">
-              TL;DR: We introduce a novel framework for 3D edge extraction, including lines and curves, from
-              multi-viewed 2D edge maps.
+              <b>EMAP</b> enables 3D edge reconstruction from multi-view 2D edge maps.
             </h2>
           </div>
         </div>
@@ -763,7 +767,7 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@InProceedings{li2024neural,
+      <pre><code>@InProceedings{Li2024CVPR,
   title={3D Neural Edge Reconstruction},
   author={Li, Lei and Peng, Songyou and Yu, Zehao and Liu, Shaohui and Pautrat, R{\'e}mi and Yin, Xiaochuan and Pollefeys, Marc},
   booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
